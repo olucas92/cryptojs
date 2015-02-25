@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>Crypto</title>
+</head>
+<body>
+  <div>
+    This is the encrypted version of the plain text
+    <span id="encrypted text"></span>
+  </div>
+  <div>
+    This is the decrypted version of the plain text
+    <span id="decrypted text"></span>
+  </div>
+
+
+
+
+<script type="text/javascript" src="http://cryptojs.altervista.org/api/functions_cryptography.js"></script>  
+<script type="text/javascript">  
+  
+var Crypt = new Crypt();  // constructor  
+  
+/*** encrypt */  
+var ciphertext = Crypt.AES.encrypt("Hello, I am going to kill you all");  
+// XluzvcUwZFU=3MD2vMz8PHySPJlKZiWjJg==1Gv6n6Tv8azr  
+  
+/*** decrypt */  
+var plaintext  = Crypt.AES.decrypt(ciphertext);  
+
+document.getElementById("encrypted text").innerHTML = ciphertext;
+
+document.getElementById("decrypted text").innetHTML = plaintext
+  
+</script> 
+</body> 
