@@ -11,6 +11,11 @@
     This is the decrypted version of the plain text
     <span id="decrypted text"></span>
   </div>
+  <div>
+    This is when we enter a wrong pass key
+    <span id="wrong key"></span>
+  </div>
+
 
 
 
@@ -21,15 +26,19 @@
 var Crypt = new Crypt();  // constructor  
   
 /*** encrypt */  
-var ciphertext = Crypt.AES.encrypt("Hello, I am going to kill you all");  
+var ciphertext = Crypt.AES.encrypt("Hello, I am going to kill you all", "Bob");  
 // XluzvcUwZFU=3MD2vMz8PHySPJlKZiWjJg==1Gv6n6Tv8azr  
   
 /*** decrypt */  
-var plaintext  = Crypt.AES.decrypt(ciphertext);  
+var plaintext  = Crypt.AES.decrypt(ciphertext, "Bob");
+
+var wrongkey = Crypt.AES.decrypt(ciphertext, "Bob")  
 
 document.getElementById("encrypted text").innerHTML = ciphertext;
 
 document.getElementById("decrypted text").innerHTML = plaintext;
+
+document.getElementById("wrong key").innerHTML = wrongkey;
   
 </script> 
 </body> 
