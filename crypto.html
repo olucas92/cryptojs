@@ -4,15 +4,15 @@
 </head>
 <body>
   <div>
-    This is the encrypted version of the plain text
+    This is the encrypted version of the plain text - 
     <span id="encrypted text"></span>
   </div>
   <div>
-    This is the decrypted version of the plain text
+    This is the decrypted version of the plain text - 
     <span id="decrypted text"></span>
   </div>
   <div>
-    This is when we enter a wrong pass key
+    This is when we enter a wrong pass key - 
     <span id="wrong key"></span>
   </div>
 
@@ -26,7 +26,7 @@
 var Crypt = new Crypt();  // constructor  
   
 /*** encrypt */  
-var ciphertext = Crypt.AES.encrypt("Hello, I am going to kill you all", "Bob");  
+var ciphertext = Crypt.AES.encrypt("Hello, my name's Bob", "Bob");  
 // XluzvcUwZFU=3MD2vMz8PHySPJlKZiWjJg==1Gv6n6Tv8azr  
   
 /*** decrypt */  
